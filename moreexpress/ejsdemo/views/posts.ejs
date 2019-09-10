@@ -1,3 +1,7 @@
+<% include partials/header %>
+<!--include header template-->
+<link rel="stylesheet" href="/app.css">
+
 <h1>The Posts Page</h1>
 
 <% for (var i = 0; i < posts.length; i++) { %>
@@ -10,3 +14,5 @@
     <%= post.title %> - <strong><%= post.author %></strong>
     </li>
 <% }); %>
+<!-- include footer template -->
+<% include partials/footer %>
