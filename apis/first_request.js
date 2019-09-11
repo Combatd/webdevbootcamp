@@ -6,15 +6,17 @@
 // });
 
 var newRequest = require('request');
+console.log("This is our body placeholder text: ")
 // error will hold any error we encounter
-newRequest('http://www.google.com', function (error, response, body) {
+newRequest('https://jsonplaceholder.typicode.com/posts/1', function (error, response, body) {
     if(error) {
         console.log("SOMETHING WENT WRONG!");
         console.log(error);
     } else {
         if(response.statusCode == 200) {
+            var parsedData = JSON.parse(body); // parse from string to code
             // things worked!
-            console.log(body);
+            console.log(parsedData['body']);
         }
     }
 });
