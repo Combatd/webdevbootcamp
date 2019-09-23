@@ -13,10 +13,10 @@
 
 console.log($('ul').html()); // html() refers to innerHTML
 
-$('ul').html("<li>I hacked your UL!</li> <li>Rusty is still adorable</li>");
+// $('ul').html("<li>I hacked your UL!</li> <li>Rusty is still adorable</li>");
 // updates to 2 lis in ul
 
-$('li').html("<a href='Google.com'>CLICK ME TO GO TO GOOGLE!</a>");
+// $('li').html("<a href='Google.com'>CLICK ME TO GO TO GOOGLE!</a>");
 // changes 2 lis to google links
 
 // we will change the img to this image http://1.bp.blogspot.com/-CNlpt4uOiHI/Tqqp8hje0II/AAAAAAAAArk/ApSYg40A0jQ/s400/common-vampire-bat_505_600x450.jpg
@@ -41,3 +41,25 @@ $("input").val("Rusty Steele");
 $("input").val(""); // reset the input to empty
 
 console.log($("select").val()); // => "Toad"
+
+$("h1").addClass("correct");
+// adds .correct style to h1
+
+$("h1").removeClass("correct"); 
+// removes .correct style from h1
+
+$("li").addClass("wrong");
+// adds .wrong style to all lis
+$("li").removeClass("wrong");
+// removes .wrong style from all lis
+
+$("li").addClass("correct");
+
+$("li").toggleClass("correct");
+// will add or remove from lis depending if it had class or not
+// lis that had the class have it removed
+// lis that did not have the class get it added
+
+$("li").first().toggleClass("done");
+// toggles .done from off to on for the first li
+
