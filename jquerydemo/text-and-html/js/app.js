@@ -40,4 +40,4 @@ $("input").val("Rusty Steele");
 // <input type"text" placeholder="your name"> => Rusty Steele
 $("input").val(""); // reset the input to empty
 
-console.log(%("select").val()); // => "Toad"
+console.log($("select").val()); // => "Toad"
