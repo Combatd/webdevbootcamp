@@ -1,4 +1,4 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const $ = require("jquery"); // jquery
+// const $ = require("jquery"); // jquery
