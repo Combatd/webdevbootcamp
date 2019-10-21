@@ -2,20 +2,20 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const PORT = 3000;
 
 require('./db/db');
 
-const connectionString = "mongodb://localhost/cats"
-
+// middleware
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(methodOverride('_method'));
 
 // new database will be cats
-mongoose.connect(connectionString, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false
+const catsController = require('./controllers/cats');
+
+app.use('/cats', catsController);
+
+
+app.listen(PORT, () => {
+    console.log('app.js listening on ' + PORT);
 });
-
-// add a new cat to the database
-
-// retrieve all cats from the database and console.log each one
