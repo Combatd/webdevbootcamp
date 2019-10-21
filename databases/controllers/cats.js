@@ -5,11 +5,13 @@ console.log('========');
 console.log(Cat);
 console.log('========');
 
+// new route (GET)
 router.get('/new', (req, res) => {
 
     res.render('new.ejs');
 });
 
+// create route (POST)
 router.post('/', (req, res) => {
     console.log(req.body, ' content of the form');
 
